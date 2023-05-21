@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city'
-import { routeLoader$, Link } from '@builder.io/qwik-city'
+import { routeLoader$ } from '@builder.io/qwik-city'
 import { component$ } from '@builder.io/qwik'
 import { db } from '~/lib/db'
 import { listings } from '~/lib/schemas/listing'
