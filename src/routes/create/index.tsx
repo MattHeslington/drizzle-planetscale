@@ -20,7 +20,6 @@ export default component$(() => {
     const action = useAddListing()
     return (
         <>
-            <h2>{import.meta.env.VITE_DATABASE_HOST}</h2>
             <Form action={action} class='flex flex-col'>
                 <input name='_id' type='hidden' value='QX4nt1IoGKii_yNTpiveS' />
                 <input name='name' class='h-12 w-64 border border-gray-300' />
