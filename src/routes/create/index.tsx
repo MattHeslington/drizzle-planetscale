@@ -21,17 +21,17 @@ export default component$(() => {
     return (
         <>
             <h1 class='text-2xl'>Add data</h1>
-            <Form action={action} class='flex flex-col'>
+            <Form action={action} class='flex flex-col space-y-4'>
                 <input name='_id' type='hidden' value='QX4nt1IoGKii_yNTpiveS' />
-                <input name='name' class='h-12 w-64 border border-gray-300' />
-                <input name='title' class='h-12 w-64 border border-gray-300' />
+                <input name='name' class='px-4 h-12 w-64 border border-gray-300' />
+                <input name='title' class='px-4 h-12 w-64 border border-gray-300' />
                 <button type='submit' class='h-12 w-64 border border-gray-300'>
-                    Add listing
+                    Add data
                 </button>
             </Form>
             {action.value?.success && (
                 // When the action is done successfully, the `action.value` property will contain the return value of the action
-                <p>Listing added successfully</p>
+                <p>Data added successfully</p>
             )}
         </>
     )

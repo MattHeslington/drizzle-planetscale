@@ -3,7 +3,7 @@ import { Link } from '@builder.io/qwik-city'
 
 export const Header = component$(() => {
     return (
-        <div class='flex w-full justify-between px-6'>
+        <div class='flex w-full justify-between px-6 h-12 items-center'>
             <Link href='/'>Qwik CRUD</Link>
             <ul class='flex space-x-6'>
                 <li>
