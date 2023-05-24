@@ -3,11 +3,11 @@ import { Header } from '../components/header'
 
 export default component$(() => {
     return (
-        <main class=''>
+        <>
             <Header />
-            <div class='px-6'>
+            <div class='container'>
                 <Slot />
             </div>
-        </main>
+        </>
     )
 })
