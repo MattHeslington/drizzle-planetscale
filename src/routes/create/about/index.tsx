@@ -1,10 +1,9 @@
-import { component$ } from '@builder.io/qwik'
+import { component$, useSignal } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
 
 import { routeAction$, Form } from '@builder.io/qwik-city'
 import { db } from '~/lib/db'
 import { listings } from '~/lib/schemas'
-// import type Listing from '~/lib/schemas'
 import { eq } from 'drizzle-orm'
 
 export const useAddData = routeAction$(async (data) => {
@@ -20,8 +19,9 @@ export const useAddData = routeAction$(async (data) => {
 
 export default component$(() => {
     const action = useAddData()
+    const hasChanged = useSignal(false)
     return (
-        <Form action={action}>
+        <Form action={action} onClick$={() => (hasChanged.value = true)}>
             <input name='id' type='hidden' value='5' />
             <fieldset>
                 <legend>place type</legend>
@@ -42,7 +42,7 @@ export default component$(() => {
                     Guest House
                 </label>
             </fieldset>
-            <button type='submit'>post data</button>
+            <button type='submit'>{action.value?.success === true ? 'saved' : 'save data'}</button>
         </Form>
     )
 })

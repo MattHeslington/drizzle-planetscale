@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik'
 import { Link } from '@builder.io/qwik-city'
+import { AccountButton } from '~/components/account-button'
 
 export const Header = component$(() => {
     return (
@@ -17,6 +18,9 @@ export const Header = component$(() => {
                 </li>
                 <li>
                     <Link href='/read'>read</Link>
+                </li>
+                <li>
+                    <AccountButton />
                 </li>
             </ul>
         </nav>
